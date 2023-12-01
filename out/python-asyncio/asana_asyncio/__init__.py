@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.0"
+__version__ = "20231201.0"
 
 # import apis into sdk package
 from asana_asyncio.api.attachments_api import AttachmentsApi

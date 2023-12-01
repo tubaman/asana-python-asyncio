@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "asana_asyncio"
-version = "1.0.0"
+version = "20231201.0"
 description = "Asana"
 authors = ["Asana Support <team@openapitools.org>"]
 license = "Apache 2.0"
