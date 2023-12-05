@@ -7,6 +7,7 @@ This is a Python asyncio client for the [Asana API](https://developers.asana.com
 
    * GNU Make
    * Docker
+   * wget
 
 ## Regenerate the client
 
