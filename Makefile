@@ -6,8 +6,9 @@ out/python-asyncio/dist/asana_asyncio-${VERSION}-py3-none-any.whl: out/python-as
 	--user $$(id -u):$$(id -g) \
 	-w /code \
 	-v $$(pwd):/code \
+	-e HOME=/code \
 	python:3-slim \
-	python3 setup.py bdist_wheel
+	bash -c "pip3 install --user build && python3 -m build"
 
 out/python-asyncio/setup.py: asana_oas.yaml
 	docker run --rm \
