@@ -1,0 +1,29 @@
+# CreateBatchRequestRequest
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**BatchRequest**](BatchRequest.md) |  | [optional] 
+
+## Example
+
+```python
+from asana_asyncio.models.create_batch_request_request import CreateBatchRequestRequest
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of CreateBatchRequestRequest from a JSON string
+create_batch_request_request_instance = CreateBatchRequestRequest.from_json(json)
+# print the JSON string representation of the object
+print(CreateBatchRequestRequest.to_json())
+
+# convert the object into a dict
+create_batch_request_request_dict = create_batch_request_request_instance.to_dict()
+# create an instance of CreateBatchRequestRequest from a dict
+create_batch_request_request_from_dict = CreateBatchRequestRequest.from_dict(create_batch_request_request_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
