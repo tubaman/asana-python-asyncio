@@ -20,7 +20,8 @@ out/python-asyncio/setup.py: asana_oas.yaml
 	--package-name asana_asyncio \
 	--additional-properties=packageVersion=${VERSION} \
 	-o /local/out/python-asyncio
-	sed -i '/from asana_asyncio.models.object import object/d' out/python-asyncio/asana_asyncio/models/status_update_request.py
+	sed -i 's/\^3.9/>=3.9/' out/python-asyncio/pyproject.toml
+	sed -i 's/Apache 2.0/Apache-2.0/' out/python-asyncio/pyproject.toml
 
 asana_oas.yaml:
 	wget https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml -O $@
