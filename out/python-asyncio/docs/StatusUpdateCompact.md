@@ -1,0 +1,33 @@
+# StatusUpdateCompact
+
+A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent's followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the project.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**gid** | **str** | Globally unique identifier of the resource, as a string. | [optional] [readonly] 
+**resource_type** | **str** | The base type of this resource. | [optional] [readonly] 
+**title** | **str** | The title of the status update. | [optional] 
+**resource_subtype** | **str** | The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning. The &#x60;resource_subtype&#x60;s for &#x60;status&#x60; objects represent the type of their parent. | [optional] [readonly] 
+
+## Example
+
+```python
+from asana_asyncio.models.status_update_compact import StatusUpdateCompact
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of StatusUpdateCompact from a JSON string
+status_update_compact_instance = StatusUpdateCompact.from_json(json)
+# print the JSON string representation of the object
+print(StatusUpdateCompact.to_json())
+
+# convert the object into a dict
+status_update_compact_dict = status_update_compact_instance.to_dict()
+# create an instance of StatusUpdateCompact from a dict
+status_update_compact_from_dict = StatusUpdateCompact.from_dict(status_update_compact_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
