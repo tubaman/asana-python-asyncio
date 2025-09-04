@@ -22,6 +22,11 @@ out/python-asyncio/setup.py: asana_oas.yaml
 	--package-name asana_asyncio \
 	--additional-properties=packageVersion=${VERSION} \
 	-o /local/out/python-asyncio
+	# set packages versions to work with micropip
+	sed -i 's/pydantic = ">= 2"/pydantic = ">= 2.10, < 2.11"/' out/python-asyncio/pyproject.toml
+	sed -i '/pydantic = /a\pydantic-core = ">= 2.27, < 2.30"' out/python-asyncio/pyproject.toml
+	sed -i '/pydantic = /a\multidict = ">= 6, < 7"' out/python-asyncio/pyproject.toml
+
 
 asana_oas.yaml:
 	wget https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml -O $@
